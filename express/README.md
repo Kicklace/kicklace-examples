@@ -10,9 +10,11 @@ cp .env.example .env     # then fill in your secret key
 npm start
 ```
 
-Node 18 or newer. The `kicklace` package has no dependencies and imports
-nothing from `node:`, so it runs the same on Node, Bun, Deno, an edge runtime
-and in a worker.
+Node 20.18 or newer, because `npm start` reads `.env` with Node's own
+`--env-file-if-exists` and there is no dotenv package here. The `kicklace`
+package itself needs Node 18, has no dependencies and imports nothing from
+`node:`, so it runs the same on Node, Bun, Deno, an edge runtime and in a
+worker.
 
 ## What to change
 

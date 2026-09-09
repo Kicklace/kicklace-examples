@@ -6,10 +6,10 @@
   "license": "MIT",
   "type": "module",
   "engines": {
-    "node": ">=18"
+    "node": ">=20.18"
   },
   "scripts": {
-    "start": "node server.js",
+    "start": "node --env-file-if-exists=.env server.js",
     "check": "node --check server.js && node --check consent.js && node --check kicklace.js"
   },
   "dependencies": {

@@ -5,7 +5,16 @@ This is the smallest hookup there is: one script tag in the `<head>`, and one
 form Kicklace hears without you writing a line of JavaScript.
 
 There is nothing to install and nothing to build. Open `index.html` in a
-browser, or drop it on any static host.
+browser to read it, and **serve** it to watch people arrive in Kicklace:
+
+```bash
+python3 -m http.server 8000     # then http://localhost:8000
+```
+
+A page opened straight off the disk has no address — `file://` reports its
+origin as `null` — and Kicklace only takes posts from an address a workspace
+has allowed, so nothing arrives from one. Any static host does; so does any
+one-line server you already like.
 
 ## What to change
 
@@ -15,9 +24,10 @@ browser, or drop it on any static host.
 2. Change `data-kl-list="product-updates"` to the address of one of your own
    lists, from **Settings → Lists**.
 3. Change the sentence on the consent checkbox to whatever you really promise.
-4. Add your site's address under **Settings → Your website → Where is your
-   site?**, or every post is refused — on purpose, so that nobody else's page
-   can put people in your workspace.
+4. Add the address you are serving it from — `http://localhost:8000` while you
+   are trying it — under **Settings → Your website → Where is your site?**, or
+   every post is refused, on purpose, so that nobody else's page can put people
+   in your workspace.
 
 ## What happens
 
@@ -40,11 +50,12 @@ nothing may email them.
 
 ## The form on this page
 
-It ends with six lines of script that stop the browser navigating away and show
-a thank-you, because this page has no server behind it. **Delete them.** On a
-real site the form keeps whatever `action` it already had — your own handler, a
-form service, your site builder's endpoint — and Kicklace does not take it
-over.
+It ends with a few lines of script that stop the browser navigating away and
+show a thank-you, because this page has no server behind it — and with them the
+`[hidden]` rule in the stylesheet, which is only there so a hidden form really
+hides. **Delete both.** On a real site the form keeps whatever `action` it
+already had — your own handler, a form service, your site builder's endpoint —
+and Kicklace does not take it over.
 
 ## If nothing arrives
 

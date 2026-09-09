@@ -9,7 +9,7 @@ what it is showing, and is MIT.
 
 | | What it shows | Install |
 | --- | --- | --- |
-| [`plain-html`](./plain-html) | The tag, and a form Kicklace hears with no JavaScript of yours | nothing |
+| [`plain-html`](./plain-html) | The tag, and a form Kicklace hears with no handler of yours | nothing |
 | [`react-vite`](./react-vite) | The tag in a single-page app, and `kl.subscribe` from a React form | `npm install` |
 | [`express`](./express) | `identify`, `subscribe` and `track` from a server, through the `kicklace` package | `npm install` |
 
@@ -50,18 +50,24 @@ await kl.track("purchase", { email, value: 49, idempotencyKey: invoice.id });
 and **For your developers** at the bottom of the same screen mints a secret
 key, which is shown once.
 
-While you are trying an example, add its address — `http://localhost:5173` for
-Vite, `http://localhost:3000` for the Express one — under **Settings → Your
-website → Where is your site?**, or every post is refused. That is deliberate:
-without it, anybody's page could put people in your workspace.
+While you are trying one of the two **browser** examples, add its address —
+`http://localhost:5173` for Vite, whatever port you serve the HTML page on —
+under **Settings → Your website → Where is your site?**, or every post is
+refused. That is deliberate: without it, anybody's page could put people in
+your workspace. The Express example needs nothing of the sort: a post carrying
+a secret key comes from a server, has no origin, and is never checked against
+that list.
 
 ## Consent is not a setting
 
 A subscription carries the words the person read, stored verbatim as the proof
 with the day and, if you send it, their IP. There is no default sentence to
-fall back on: a `subscribe` without one is refused. Every example keeps that
-sentence as **one constant**, shown on the form and sent with the call, so what
-a person agreed to and what Kicklace keeps cannot drift apart.
+fall back on: a `subscribe` without one is refused.
+
+Every example keeps that sentence in **one place**, so what a person agreed to
+and what Kicklace keeps cannot drift apart: `plain-html` lets the tag read it
+off the label of the ticked box, and the other two hold it as one constant that
+the form shows and the call sends.
 
 And Kicklace only emails somebody who has been in touch — who bought, signed
 up, wrote in, replied, or joined a list. There is no switch that turns that
