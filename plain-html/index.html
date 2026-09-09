@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kicklace, one tag on a plain HTML page</title>
+
+    <!--
+      The Kicklace tag. One line, in the <head> of every page.
+
+      Replace YOUR_PUBLIC_KEY with the public key from your workspace under
+      Settings → Your website. It is a public key: it can only add people, and
+      it is meant to be in a page anybody can read the source of. A secret key
+      (sk_live_…) must never go here.
+    -->
+    <script async src="https://www.kicklace.com/api/in/YOUR_PUBLIC_KEY/track.js"></script>
+
+    <style>
+      :root { color-scheme: light dark; }
+      /* An author rule beats the browser's own [hidden] { display: none },
+         whatever the specificity, so `form { display: grid }` below would
+         quietly un-hide a hidden form without this line. */
+      [hidden] { display: none !important; }
+      body {
+        margin: 0 auto;
+        padding: 3rem 1.25rem;
+        max-width: 34rem;
+        font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      }
+      h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 0.5rem; }
+      p { margin: 0 0 1rem; }
+      form { margin: 2rem 0 0; display: grid; gap: 0.75rem; }
+      label { display: grid; gap: 0.25rem; font-size: 0.9rem; }
+      input[type="email"], input[type="text"] {
+        font: inherit;
+        padding: 0.55rem 0.65rem;
+        border: 1px solid currentColor;
+        border-radius: 6px;
+        background: transparent;
+        color: inherit;
+      }
+      .consent { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.9rem; }
+      button { font: inherit; padding: 0.6rem 1.1rem; border-radius: 6px; cursor: pointer; }
+      .trap { position: absolute; left: -9999px; }
+      small { opacity: 0.7; }
+    </style>
+  </head>
+
+  <body>
+    <h1>Widgets for people who like widgets</h1>
+    <p>
+      This page is an example of the smallest possible Kicklace hookup: one
+      script tag, and one form Kicklace hears without being asked.
+    </p>
+
+    <!--
+      data-kl-list is the whole hookup. The tag listens for the submit on its
+      way past, reads the email address and the ticked consent box, and posts
+      the signup to the list named here. It never calls preventDefault, adds
+      nothing to your markup and needs no ids, so the form goes on doing
+      exactly what it did before.
+
+      The words stored as the proof are the words on the label of the ticked
+      required checkbox — so what the person read and what Kicklace keeps are
+      one sentence, with nowhere for the two to drift apart.
+    -->
+    <form data-kl-list="product-updates">
+      <label>
+        Email
+        <input type="email" name="email" required autocomplete="email" />
+      </label>
+
+      <label>
+        Name (optional)
+        <input type="text" name="name" autocomplete="name" />
+      </label>
+
+      <p class="consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">
+          Email me when there is something new to try. I can unsubscribe with
+          one click.
+        </label>
+      </p>
+
+      <!--
+        Your own bot trap. A person never sees it, so a filled-in one is a bot:
+        your form throws that submit away, and the tag throws it away too. It
+        has to be named hp, honeypot, honey, gotcha or botfield for the tag to
+        know what it is.
+      -->
+      <input class="trap" type="text" name="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+      <button type="submit">Join</button>
+    </form>
+
+    <p id="thanks" hidden>
+      You are on the list. Unsubscribe with one click whenever you like.
+    </p>
+
+    <p><small>Open your browser console: a refused post says why, in one sentence.</small></p>
+
+    <script>
+      // This page has no server behind it, so it shows its own thank-you and
+      // stops the browser navigating away. Delete it: on a real site the form
+      // keeps whatever action it already had, and Kicklace has already heard
+      // the submit by the time this runs — its listener is on the capture
+      // phase, which happens before anything on the page can cancel it.
+      var form = document.querySelector("form");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+        form.hidden = true;
+        document.getElementById("thanks").hidden = false;
+      });
+    </script>
+  </body>
+</html>

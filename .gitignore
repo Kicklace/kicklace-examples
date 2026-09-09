@@ -1,0 +1,13 @@
+# This folder is pushed to a public repository of its own (kicklace-examples),
+# where there is no ignore file above it, so the rules live here.
+node_modules/
+dist/
+.next/
+
+# Never anybody's real keys. The list of names is committed on purpose.
+.env
+.env.*
+!.env.example
+
+.DS_Store
+*.tsbuildinfo

@@ -1,0 +1,19 @@
+{
+  "name": "kicklace-example-express",
+  "version": "0.1.0",
+  "private": true,
+  "description": "An Express server that calls track, identify and subscribe through the kicklace package.",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check consent.js && node --check kicklace.js"
+  },
+  "dependencies": {
+    "express": "^5.2.0",
+    "kicklace": "^0.1.0"
+  }
+}

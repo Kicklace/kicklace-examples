@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kicklace in a Vite React app</title>
+
+    <!--
+      The Kicklace tag. It goes here, in index.html, and not in a component:
+      Vite copies this file through untouched, so the tag is in the page before
+      React has started and the first page read is not lost.
+
+      Replace YOUR_PUBLIC_KEY with the public key from your workspace under
+      Settings → Your website, which shows the whole line with the key in it.
+      It is a public key — it can only add people — and a secret key
+      (sk_live_…) must never be in a page.
+    -->
+    <script async src="https://www.kicklace.com/api/in/YOUR_PUBLIC_KEY/track.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
