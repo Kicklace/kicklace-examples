@@ -25,9 +25,13 @@ npm run dev
 
 No environment variables. The tag's address carries the public key, which is
 how the script knows which workspace it belongs to, so there is nothing to
-inject at build time. The four names `KICKLACE_SECRET_KEY`, `KICKLACE_URL`,
-`NEXT_PUBLIC_KICKLACE_KEY` and `NEXT_PUBLIC_KICKLACE_URL` belong to the server
-side of Kicklace — see the `express` example next door.
+inject at build time.
+
+The four names Kicklace's own tooling writes — `KICKLACE_SECRET_KEY` and
+`KICKLACE_URL` for a server holding the secret key, `NEXT_PUBLIC_KICKLACE_KEY`
+and `NEXT_PUBLIC_KICKLACE_URL` for `<KicklaceTag />` in a Next.js project,
+which does the job `index.html` does here — belong to those two places. See the
+`express` example next door, and the Next.js starter.
 
 ## Why the tag is in `index.html` and not in a component
 
