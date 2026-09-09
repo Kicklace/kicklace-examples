@@ -76,12 +76,12 @@ off.
 ## Somewhere else to start
 
 - **A whole Next.js app, deployed in one click**:
-  [kicklace-nextjs-starter](https://github.com/fallguy04/kicklace-nextjs-starter)
+  [kicklace-nextjs-starter](https://github.com/Kicklace/kicklace-nextjs-starter)
 - **A Next.js project you already have**: `npx kicklace init` adds the tag, the
   dependency and the environment names, and prints every change first with
   `--dry-run`.
 - **The docs**: <https://www.kicklace.com/docs>
 - **The package's source**:
-  [kicklace-js](https://github.com/fallguy04/kicklace-js)
+  [kicklace-js](https://github.com/Kicklace/kicklace-js)
 
 MIT
