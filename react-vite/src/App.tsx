@@ -5,15 +5,20 @@ import { track } from "./kicklace";
 export function App() {
   const [tries, setTries] = useState(0);
 
-  // An event of your own: 2 to 40 characters of lowercase letters, digits and
-  // underscores. It lands on the person's timeline and an automation can
-  // answer it. It moves nobody between stages, because Kicklace cannot know
-  // what a name it has never seen means. `configure`, `cta_click` and
-  // `download` are Kicklace's own names and behave the same way.
+  // `configure` is Kicklace's own name for "tried the in-browser demo". It
+  // lands on the person's timeline with whatever properties you send and an
+  // automation can answer it; it moves nobody between stages.
+  //
+  // The tag posts Kicklace's own names only — pageview, configure, cta_click,
+  // download, activated, signup, purchase, trial_started, churned and the
+  // rest. A name of your own goes through the server door instead
+  // (`POST /api/v1/events`, or `kl.track` from the `kicklace` package), because
+  // the public key is in the page and anybody could otherwise invent names in
+  // your workspace. An unknown name here is refused as `unknown_event`.
   function onTry() {
     const next = tries + 1;
     setTries(next);
-    void track("demo_opened", { times: next });
+    void track("configure", { times: next });
   }
 
   return (
@@ -31,7 +36,7 @@ export function App() {
         </button>{" "}
         {tries > 0 && (
           <small>
-            Sent <code>demo_opened</code> {tries} {tries === 1 ? "time" : "times"}.
+            Sent <code>configure</code> {tries} {tries === 1 ? "time" : "times"}.
           </small>
         )}
       </p>

@@ -2,8 +2,8 @@
 
 Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
 This example puts the tag in `index.html`, where it belongs in a single-page
-app, and calls `kl.subscribe` from a React form so the form can show its own
-state.
+app, calls `kl.subscribe` from a React form so the form can show its own state,
+and records one event from a button.
 
 ```bash
 npm install
@@ -62,13 +62,21 @@ if the script never loaded, and never throws.
 Everything the tag can do:
 
 ```ts
-kl.track("demo_opened", { properties: { times: 2 } });
+kl.track("configure", { properties: { times: 2 } });
 kl.identify({ email });                    // stitch this browser to a person
 kl.subscribe({ email, list, consent });    // resolves { ok, status }
 kl.capture(formElement);                   // read one form and send it
 kl.id();                                   // this browser's id
 kl.optOut(); kl.optIn();                   // remembered in localStorage
 ```
+
+`kl.track` takes **Kicklace's own names only** — `pageview`, `configure`,
+`cta_click`, `download`, `activated`, `signup`, `purchase`, `trial_started`,
+`churned` and the rest, which `EventName` in `src/kicklace.ts` lists in full.
+An event of your own goes through the server door instead (`POST
+/api/v1/events`, or `track` from the `kicklace` package, as in `../express`),
+because the public key is in the page and anybody could otherwise invent names
+in your workspace. An unknown name here is refused as `unknown_event`.
 
 ## Consent
 

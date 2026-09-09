@@ -14,9 +14,30 @@ export type Outcome = { ok: boolean; status: string };
 
 type Consent = string | { text: string; granted_at?: string };
 
+/**
+ * The event names the tag may post. A name of your own goes through the server
+ * door instead (`POST /api/v1/events`, or the `kicklace` package): the public
+ * key is in the page, so anybody could otherwise invent names in your
+ * workspace. An unknown one here is refused as `unknown_event`.
+ */
+export type EventName =
+  | "pageview"
+  | "configure"
+  | "cta_click"
+  | "waitlist_cta"
+  | "measure_cta"
+  | "download"
+  | "activated"
+  | "signup"
+  | "purchase"
+  | "credit_purchase"
+  | "trial_started"
+  | "churned"
+  | "subscription_cancelled";
+
 type Tag = {
-  /** Any event: one of Kicklace's names, or one of your own. */
-  track(type: string, options?: { properties?: Record<string, unknown> }): void;
+  /** One of Kicklace's own event names. */
+  track(type: EventName, options?: { properties?: Record<string, unknown> }): void;
   /** Stitch this browser to a person you already know. */
   identify(who: { email?: string; account_id?: string }): void;
   /** A form of your own: the address, the list, and the words they agreed to. */
@@ -71,7 +92,7 @@ export async function subscribe(options: {
 
 /** Record something that happened. Nothing to await: the tag posts and returns. */
 export async function track(
-  type: string,
+  type: EventName,
   properties?: Record<string, unknown>,
 ): Promise<void> {
   const kl = await tag();
