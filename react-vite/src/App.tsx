@@ -12,7 +12,7 @@ export function App() {
   // The tag posts Kicklace's own names only — pageview, configure, cta_click,
   // download, activated, signup, purchase, trial_started, churned and the
   // rest. A name of your own goes through the server door instead
-  // (`POST /api/v1/events`, or `kl.track` from the `kicklace` package), because
+  // (`POST /api/v1/events`, or the `kicklace` package's own `track`), because
   // the public key is in the page and anybody could otherwise invent names in
   // your workspace. An unknown name here is refused as `unknown_event`.
   function onTry() {
@@ -27,7 +27,7 @@ export function App() {
       <p>
         A Vite React app with the Kicklace tag in <code>index.html</code>, a
         signup form that calls <code>kl.subscribe</code>, and one button that
-        records an event of its own.
+        records an event.
       </p>
 
       <p>
