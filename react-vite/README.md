@@ -13,12 +13,12 @@ npm run dev
 ## What to change
 
 1. In `index.html`, replace `YOUR_PUBLIC_KEY` in the script tag with the public
-   key from your workspace, under **Settings → Your website**. That screen
+   key from your workspace, under **Connections → Your website**. That screen
    shows the whole line with the key already in it. It is a public key: it can
    only add people, and it is meant to be in a page.
 2. In `src/consent.ts`, set `LIST` to the address of one of your own lists
    (**Settings → Lists**) and `CONSENT` to whatever you really promise.
-3. Add your site's address under **Settings → Your website → Where is your
+3. Add your site's address under **Connections → Your website → Where is your
    site?**, including `http://localhost:5173` while you are developing, or
    every post is refused — on purpose, so that nobody else's page can put
    people in your workspace.

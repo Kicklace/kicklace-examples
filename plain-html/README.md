@@ -19,13 +19,13 @@ one-line server you already like.
 ## What to change
 
 1. In `index.html`, replace `YOUR_PUBLIC_KEY` in the script tag with the public
-   key from your workspace, under **Settings → Your website**. That screen
+   key from your workspace, under **Connections → Your website**. That screen
    shows the whole line with the key already in it.
 2. Change `data-kl-list="product-updates"` to the address of one of your own
    lists, from **Settings → Lists**.
 3. Change the sentence on the consent checkbox to whatever you really promise.
 4. Add the address you are serving it from — `http://localhost:8000` while you
-   are trying it — under **Settings → Your website → Where is your site?**, or
+   are trying it — under **Connections → Your website → Where is your site?**, or
    every post is refused, on purpose, so that nobody else's page can put people
    in your workspace.
 

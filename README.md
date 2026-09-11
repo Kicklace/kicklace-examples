@@ -46,13 +46,13 @@ await kl.track("purchase", { email, value: 49, idempotencyKey: invoice.id });
 
 ## Both keys are in one screen
 
-**Settings → Your website** shows the tag with your public key already in it,
+**Connections → Your website** shows the tag with your public key already in it,
 and **For your developers** at the bottom of the same screen mints a secret
 key, which is shown once.
 
 While you are trying one of the two **browser** examples, add its address —
 `http://localhost:5173` for Vite, whatever port you serve the HTML page on —
-under **Settings → Your website → Where is your site?**, or every post is
+under **Connections → Your website → Where is your site?**, or every post is
 refused. That is deliberate: without it, anybody's page could put people in
 your workspace. The Express example needs nothing of the sort: a post carrying
 a secret key comes from a server, has no origin, and is never checked against

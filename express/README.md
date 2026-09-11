@@ -18,7 +18,7 @@ worker.
 
 ## What to change
 
-1. Put your secret key in `.env`. It is under **Settings → Your website → For
+1. Put your secret key in `.env`. It is under **Connections → Your website → For
    your developers**, and it is shown once. It is a server key: it must never
    be in a page or in a repository.
 2. In `consent.js`, set `LIST` to the address of one of your own lists
@@ -60,7 +60,7 @@ starts a new one.
 ## Payments
 
 **You may not need `/api/purchase` at all.** Kicklace takes Stripe's webhook
-itself: Settings → Integrations → Payments from Stripe gives you an address to
+itself: Connections → Stripe gives you an address to
 paste into your Stripe dashboard, and from then on a paid invoice is a purchase
 with its amount on the person's timeline and the lifecycle moves them to
 Purchaser — with no code, no deployment, and no signing secret in your project.

@@ -80,7 +80,7 @@ app.post("/api/signup", async (request, response) => {
 // Somebody paid.
 //
 // You may not need this route at all. Kicklace takes Stripe's webhook itself:
-// Settings → Integrations → Payments from Stripe gives you an address to paste
+// Connections → Stripe gives you an address to paste
 // into your Stripe dashboard, and from then on a paid invoice is a purchase
 // with its amount on the person's timeline and the lifecycle moves them to
 // Purchaser — with no code, no deployment, and no signing secret in your
