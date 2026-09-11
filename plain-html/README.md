@@ -34,7 +34,7 @@ one-line server you already like.
 | On the page | In Kicklace |
 | --- | --- |
 | Somebody reads the page | A visitor record, with where they came from |
-| They fill the form in | They join `product-updates`, at the Subscriber stage |
+| They fill the form in | They join `product-updates`, and the list says so on their record |
 | They tick the box | The words on the label are stored verbatim as the proof |
 
 The tag hears the submit on the **capture phase**, which runs before anything

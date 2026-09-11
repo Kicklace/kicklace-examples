@@ -83,7 +83,7 @@ app.post("/api/signup", async (request, response) => {
 // Connections → Stripe gives you an address to paste
 // into your Stripe dashboard, and from then on a paid invoice is a purchase
 // with its amount on the person's timeline and the lifecycle moves them to
-// Purchaser — with no code, no deployment, and no signing secret in your
+// Paying — with no code, no deployment, and no signing secret in your
 // project. Prefer that.
 //
 // Keep a route like this when the payment is not the whole story: when you

@@ -38,7 +38,7 @@ curl -X POST localhost:3000/api/purchase \
 
 Then open the person in Kicklace: they are on the list with the sentence they
 agreed to stored word for word, the sign-up moved them to the Account stage and
-the purchase moved them to Purchaser.
+the purchase moved them to Paying.
 
 ## The three calls
 
@@ -63,7 +63,7 @@ starts a new one.
 itself: Connections → Stripe gives you an address to
 paste into your Stripe dashboard, and from then on a paid invoice is a purchase
 with its amount on the person's timeline and the lifecycle moves them to
-Purchaser — with no code, no deployment, and no signing secret in your project.
+Paying — with no code, no deployment, and no signing secret in your project.
 Prefer that.
 
 Keep a route like this one when the payment is not the whole story: when you
