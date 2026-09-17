@@ -14,6 +14,6 @@
   },
   "dependencies": {
     "express": "^5.2.0",
-    "kicklace": "^0.1.0"
+    "kicklace": "^0.3.1"
   }
 }

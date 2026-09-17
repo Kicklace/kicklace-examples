@@ -4,7 +4,7 @@ Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
 One customer record from the first anonymous visit through the sign-up to the
 subscription, with the email, the automations and the AI on top of it.
 
-Three small, complete projects. Each one runs on its own, has nothing in it but
+Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.
 
 | | What it shows | Install |
@@ -12,6 +12,7 @@ what it is showing, and is MIT.
 | [`plain-html`](./plain-html) | The tag, and a form Kicklace hears with no handler of yours | nothing |
 | [`react-vite`](./react-vite) | The tag in a single-page app, and `kl.subscribe` from a React form | `npm install` |
 | [`express`](./express) | `identify`, `subscribe` and `track` from a server, through the `kicklace` package | `npm install` |
+| [`with-kicklace`](./with-kicklace) | The smallest Next.js app: the tag in the root layout, and one server-side event | `npm install` |
 
 ## The two doors
 

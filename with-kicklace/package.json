@@ -1,0 +1,24 @@
+{
+  "name": "with-kicklace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "The smallest Next.js app wired to Kicklace: the tag in the root layout, and one server-side event.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "kicklace": "^0.3.1",
+    "next": "^16.3.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
