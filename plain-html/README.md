@@ -1,6 +1,7 @@
 # A plain HTML page
 
-Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
+Kicklace is customer email for founders: it maps where your customers are,
+writes the emails they should get in your own voice, and sends them.
 This is the smallest hookup there is: one script tag in the `<head>`, and one
 form Kicklace hears without you writing a line of JavaScript.
 

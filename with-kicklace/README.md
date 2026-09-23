@@ -1,9 +1,8 @@
 # with-kicklace
 
-Kicklace is an AI-powered CRM and customer platform for micro SaaS companies. One customer record
-from the first anonymous visit through the sign-up to the subscription, with the lifecycle,
-automations and AI on top of it. This example is the smallest way to see it work — two things
-wired in, nothing else:
+Kicklace is customer email for founders: it maps where your customers are, writes the emails they
+should get in your own voice, and sends them. This example is the smallest way to see it work — two
+things wired in, nothing else:
 
 - **The tag**, in `app/layout.tsx` — every read of this page is already on its way to Kicklace.
 - **One event**, posted from `app/api/signup/route.ts` — a person signing up, told to Kicklace with

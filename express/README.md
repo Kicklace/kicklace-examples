@@ -1,6 +1,7 @@
 # An Express server
 
-Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
+Kicklace is customer email for founders: it maps where your customers are,
+writes the emails they should get in your own voice, and sends them.
 This example is the server side of it: one client, three calls, and a refusal
 that comes back as data rather than an exception.
 

@@ -1,6 +1,7 @@
 # A Vite React app
 
-Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
+Kicklace is customer email for founders: it maps where your customers are,
+writes the emails they should get in your own voice, and sends them.
 This example puts the tag in `index.html`, where it belongs in a single-page
 app, calls `kl.subscribe` from a React form so the form can show its own state,
 and records one event from a button.

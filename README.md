@@ -1,8 +1,7 @@
 # Kicklace examples
 
-Kicklace is an AI-powered CRM and customer platform for micro SaaS companies.
-One customer record from the first anonymous visit through the sign-up to the
-subscription, with the email, the automations and the AI on top of it.
+Kicklace is customer email for founders: it maps where your customers are,
+writes the emails they should get in your own voice, and sends them.
 
 Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.
