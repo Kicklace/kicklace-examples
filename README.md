@@ -1,7 +1,6 @@
 # Kicklace examples
 
-Kicklace is customer email for founders: it maps where your customers are,
-writes the emails they should get in your own voice, and sends them.
+Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice.
 
 Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.

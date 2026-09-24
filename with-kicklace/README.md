@@ -1,7 +1,6 @@
 # with-kicklace
 
-Kicklace is customer email for founders: it maps where your customers are, writes the emails they
-should get in your own voice, and sends them. This example is the smallest way to see it work — two
+Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice. This example is the smallest way to see it work — two
 things wired in, nothing else:
 
 - **The tag**, in `app/layout.tsx` — every read of this page is already on its way to Kicklace.
