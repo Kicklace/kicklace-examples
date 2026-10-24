@@ -46,8 +46,7 @@ await kl.track("purchase", { email, value: 49, idempotencyKey: invoice.id });
 ## Both keys are in one screen
 
 **Connections → Your website** shows the tag with your public key already in it,
-and **For your developers** at the bottom of the same screen mints a secret
-key, which is shown once.
+and its **Developers** tab mints a secret key, which is shown once.
 
 While you are trying one of the two **browser** examples, add its address —
 `http://localhost:5173` for Vite, whatever port you serve the HTML page on —

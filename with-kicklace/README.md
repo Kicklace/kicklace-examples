@@ -23,7 +23,7 @@ npm run dev
 ```
 
 Both keys — a public one for the tag, a secret one for the server — are under **Connections → Your
-website → For your developers** in a Kicklace workspace, minted the moment you sign up. Fill both
+website → Developers** in a Kicklace workspace, minted the moment you sign up. Fill both
 into `.env.local`.
 
 Open [http://localhost:3000](http://localhost:3000), submit the form, and look at the workspace: a

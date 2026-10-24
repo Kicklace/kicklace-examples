@@ -12,7 +12,7 @@ export default function Home() {
       <SignupForm />
       <p>
         Set the four names in <code>.env.example</code> as <code>.env.local</code> first — the two
-        keys are under Connections → Your website → For your developers in a Kicklace workspace.
+        keys are under Connections → Your website → Developers in a Kicklace workspace.
       </p>
     </main>
   );
