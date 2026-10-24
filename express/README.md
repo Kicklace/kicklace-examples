@@ -1,6 +1,6 @@
 # An Express server
 
-Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice.
+Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
 This example is the server side of it: one client, three calls, and a refusal
 that comes back as data rather than an exception.
 

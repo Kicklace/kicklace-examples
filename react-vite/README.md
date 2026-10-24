@@ -1,6 +1,6 @@
 # A Vite React app
 
-Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice.
+Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
 This example puts the tag in `index.html`, where it belongs in a single-page
 app, calls `kl.subscribe` from a React form so the form can show its own state,
 and records one event from a button.

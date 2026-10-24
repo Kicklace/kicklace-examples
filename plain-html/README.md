@@ -1,6 +1,6 @@
 # A plain HTML page
 
-Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice.
+Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
 This is the smallest hookup there is: one script tag in the `<head>`, and one
 form Kicklace hears without you writing a line of JavaScript.
 

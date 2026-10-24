@@ -1,6 +1,6 @@
 # Kicklace examples
 
-Kicklace is customer follow-up for small businesses: it turns the interest your website earns into customers, following up with every lead in your own voice.
+Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
 
 Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.
