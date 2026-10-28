@@ -1,6 +1,6 @@
 # Kicklace examples
 
-Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
+Kicklace is lifecycle email for SaaS founders: one map that follows every customer from sign-up to paying, with the emails for each stage on it, written in your own voice.
 
 Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.

@@ -1,6 +1,6 @@
 # A plain HTML page
 
-Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
+Kicklace is lifecycle email for SaaS founders: one map that follows every customer from sign-up to paying, with the emails for each stage on it, written in your own voice.
 This is the smallest hookup there is: one script tag in the `<head>`, and one
 form Kicklace hears without you writing a line of JavaScript.
 

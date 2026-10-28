@@ -1,6 +1,6 @@
 # An Express server
 
-Kicklace is lifecycle email for SaaS founders: it follows every customer from sign-up to paying and writes the emails along the way in your own voice.
+Kicklace is lifecycle email for SaaS founders: one map that follows every customer from sign-up to paying, with the emails for each stage on it, written in your own voice.
 This example is the server side of it: one client, three calls, and a refusal
 that comes back as data rather than an exception.
 
