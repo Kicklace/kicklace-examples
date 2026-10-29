@@ -1,6 +1,8 @@
 # Kicklace examples
 
-Kicklace is lifecycle email for SaaS founders: one map that follows every customer from sign-up to paying, with the emails for each stage on it, written in your own voice.
+Kicklace is lifecycle email for SaaS founders: one map that follows every customer from sign-up to paying, with the emails for each stage on it, written in your own voice. Connect your website and Stripe, and Kicklace reads your site and your payment history, places every customer on one map by what they have done, and writes the welcome, onboarding, trial-ending and failed-payment emails for you to read and switch on. It is free up to 1,000 contacts.
+
+Kicklace does the follow-up a CRM is bought for, without the CRM. Instead of contacts, pipelines and campaigns on separate screens to learn, every customer and every email is on one map, made for founders who have never set up a CRM. How it compares with [Loops](https://www.kicklace.com/loops-alternative), [Customer.io](https://www.kicklace.com/customer-io-alternative) and [Mailchimp](https://www.kicklace.com/mailchimp-alternative-for-saas); its [MCP server](https://www.kicklace.com/docs/mcp) lets Claude and other AI assistants read and work in it.
 
 Four small, complete projects. Each one runs on its own, has nothing in it but
 what it is showing, and is MIT.
